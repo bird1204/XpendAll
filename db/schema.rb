@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130928113203) do
+ActiveRecord::Schema.define(:version => 20130928142143) do
 
   create_table "products", :force => true do |t|
     t.integer  "shop_id"
@@ -40,13 +40,10 @@ ActiveRecord::Schema.define(:version => 20130928113203) do
   create_table "ranks", :force => true do |t|
     t.integer  "shop_id"
     t.integer  "provider_id"
-    t.string   "name"
-    t.string   "category"
-    t.integer  "quantity"
-    t.boolean  "taken"
     t.boolean  "enabled"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "degree"
   end
 
   add_index "ranks", ["provider_id"], :name => "index_ranks_on_provider_id"

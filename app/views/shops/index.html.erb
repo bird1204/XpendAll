@@ -1,0 +1,20 @@
+<table>
+<tr>
+  <th>name</th>
+  <th>inventory</th>
+  <th>provider</th>
+  <th>rank</th>
+  <th>updated_at</th>
+</tr>
+<%@display.each do |d|%>
+<tr>
+  <td><%=d[:name]%></td>
+  <td><%=(d[:inventory].to_i > 0)? d[:inventory] : d[:inventory].to_i+999%></td>
+  <td><%=d[:provider]%></td>
+  <td><%=d[:rank]%></td>
+  <td><%=d[:updated_at]%></td>
+</tr>
+<%end%>
+</table>
+
+<%=link_to "連結", ranks_path%>
