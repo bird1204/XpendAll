@@ -4,8 +4,16 @@ gem 'rails', '3.2.14'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
+# Bundle edge Rails instead:
+# gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'activerecord-sqlserver-adapter'
+gem 'tiny_tds'
+gem 'mysql2'
+gem 'will_paginate', '~> 3.0'
 
-gem 'sqlite3'
+# 編輯器(use Ckeditor)
+gem "ckeditor"                  #, "~> 3.6.0" # 如果要使用舊版本的ckeditor 就用3.6.2("~> 3.6.0"), 新版本預設為 4.0.2
+gem "paperclip"                 # Ckeditor需要
 
 
 # Gems used only for assets and not required
